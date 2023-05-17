@@ -1,0 +1,26 @@
+({{projectAmount}})-33
+({{stacksAmount}})-45
+{{else}}
+<b>{{company.name}}</b> -28
+
+{{#with footer}}
+<footer>
+
+     <div>
+          {{#with social}}
+          {{>link text=email.text href=email.href blank=true }}
+          {{>link text=phone.text href=phone.href blank=true }}
+          {{>link text=linkedin.text href=linkedin.href blank=true }}
+
+          {{/with}}
+     </div>
+     <br>
+     <div>
+          <em>Copyright {{../header.name.firstname}} {{../header.name.lastname}}</em>
+     </div>
+     <br>
+     <div>
+          <em>address {{../header.address}} </em>
+     </div>
+</footer>
+{{/with}} --big27
