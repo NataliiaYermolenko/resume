@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <title>
+          Person page
+     </title>
+     <meta charset='utf-8' />
+     <link href='css/index.css' rel='stylesheet' />
+</head>
+
+<body>
+     <div>
+          {{#with person}}
+
+          <div>
+               <div></div>
+               <h1>{{name}}</h1>
+               <em> <strong>{{age}}</em> {{gender}}</strong>
+               {{#with address}}
+               <address>{{street}}
+                    {{city}}
+                    {{state}}
+                    {{zip}}
+                    {{country}}
+               </address>
+               {{/with}}
+          </div>
+          <hr> <br>
+          <div>
+               <h2>Education</h2>
+               {{#each education}}
+               <ul>
+                    <li> degree: {{degree}},</li>
+                    <li> major: {{major}},</li>
+                    <li> university:{{university}}</li>
+               </ul>
+               <em> graduationYear:{{graduationYear}}</em>
+               {{/each}}
+          </div>
+          <br>
+          {{/with}}
+     </div>
+     {{{body}}}
+
+
+</body>
+
+
+</html>
