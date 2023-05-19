@@ -1,0 +1,81 @@
+<div>
+     {{#with person}}
+     <div>
+          <h2>Workexperience:</h2>
+          {{#each workExperience}}
+          <b>company:</b> {{company}}<br>
+          <b>title:</b> {{title}}<br>
+          <b>startDate:</b> {{ startDate}}<br>
+          <b>endDate:</b> {{endDate}}<br>
+          <b>responsibilities:</b>{{responsibilities}}<br>
+          <b>year_founded:</b> {{year_founded}}<br>
+          <b>industry:</b> {{industry}}
+
+     </div>
+
+     <div>
+          <h3>Employees:</h3>
+          {{#each employees}}
+          <b>name:</b> {{name}},<br>
+          <b>position:</b> {{position}}<br>
+          <b>department:</b> {{department}}<br>
+
+     </div>
+     <div>
+          <h3>Projects:</h3>
+          {{#each projects}}
+          <b>name: </b>{{name}}<br>
+          <b>status:</b> {{status}}
+
+
+     </div>
+     <div>
+          <h3>Teams:</h3>
+          {{#each teams}}
+          <b>team_name:</b> {{team_name}}<br>
+          {{#with team_leader}}
+          <b>name:</b>{{name}}<br>
+          <b>title:</b> {{title}}<br>
+          <b>email:</b>{{email}}
+          {{/with}}
+     </div>
+     <div>
+          <h3>Team_members:</h3>
+          {{#each team_members}}
+          <b>name:</b> {{name}}<br>
+          <b>title:</b> {{title}}<br>
+          <b>email:</b> {{email}}<br>
+          <b>skills:</b>
+          <ul>
+               <li>'Java'</li>
+               <li>'Python'</li>
+               <li>'SQL'</li>
+          </ul>
+     </div>
+     <div>
+          <h3>Projects:</h3>
+          {{#each projects}}
+          <b>name:</b> {{name}}<br>
+          <b>description:</b> {{description}}<br>
+          <b>technologies:</b>
+          <ul>
+               <li>'Java'</li>
+               <li>'Spring Framework'</li>
+          </ul>
+     </div>
+     <div>
+          <h3>team_members:</h3>
+          {{#each team_members}}
+          <b>name:</b> {{name}}
+          <b>title:</b>{{title}}
+     </div>
+     {{/each}}
+     {{/each}}
+     {{/each}}
+     {{/each}}
+     {{/each}}
+     {{/each}}
+     {{/each}}
+     {{/with}}
+
+</div>
