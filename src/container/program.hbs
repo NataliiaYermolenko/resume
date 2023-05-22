@@ -1,1 +1,65 @@
-<div>on progress</div>
+<div>
+     {{#with program}}
+     {{#with excursion}}
+     <date>{{date}}</date>
+     <h2>Program</h2>
+     {{#each program}}
+     <div>
+          {{name}}<br>
+          {{type}}<br>
+          duration: {{duration}}<br>
+     </div>
+     {{#with details}}
+     {{#with museum}}
+     <h3>{{name}}</h3>
+     {{#with location}}
+     <div>
+          <address>
+               {{address}}
+               {{city}}
+               {{country}}
+          </address><br>
+     </div>
+     {{/with}}
+     <h3>Exhibits</h3>
+     {{#each exhibits}}
+     <div>
+          <b>{{name}}</b> <br>
+          <em> <b>{{artist}}</b></em><br>
+          description: {{description}}<br>
+          audio_guide: {{audio_guide}}<br><br>
+     </div>
+     {{/each}}
+     {{/with}}
+     {{#with venue}}
+     <h3>{{name}}</h3>
+     {{#with location}}
+     <div></div>
+     <address>
+          {{address}}
+          {{city}}
+          {{country}}
+     </address><br>
+</div>
+{{/with}}
+{{/with}}
+{{#each performers}}
+<div>
+     <h3>{{name}}</h3>
+     {{type}} <br><br>
+</div>
+{{/each}}
+<b>guide</b>
+{{#with guide}}
+<div>
+     {{name}}<br>
+     language:{{language}}<br>
+     rating:{{rating}}<br><br>
+</div>
+{{/with}}
+{{/with}}
+{{/each}}
+{{/with}}
+{{/with}}
+
+</div>

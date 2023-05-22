@@ -10,22 +10,24 @@
 </head>
 
 <body>
-     <!-- <div>
-          {{#with pprogram}}
+     <div>
+          {{#with program}}
           <div>
-               <h1>{{excursion.name=name}}</h1>
+               <h1>{{excursion.name}}</h1>
+
                <address>
-                    {{location.city}}
-                    {{location.country}}
+                    <h2> {{excursion.location.city}},
+                         {{excursion.location.country}}
+                    </h2>
                </address>
+               <hr><br>
+          </div>
 
-               <br>
 
-               {{/with}}
-          </div>-->
-     <div>test</div>
-     {{{body}}}
+          {{/with}}
 
+          {{{body}}}
+     </div>
 
 </body>
 
