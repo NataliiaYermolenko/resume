@@ -71,76 +71,75 @@
                </div>
                {{/with}}
 
-          </div>пше іефегі
-          <div>
-               <b> safety:</b>
-               {{#with safety}}<br>
-               <div>
-                    <b> airbags:</b>
-                    {{#with airbags}}<br>
-                    front:{{front}},
-                    side:{{side}},
-                    knee:{{knee}},
-                    rear: {{rear}},
-                    {{/with}}
-               </div>
-               <div>
-                    <b> assistance:</b>
-                    {{#with assistance}}<br>
-                    blind_spot_monitoring:{{blind_spot_monitoring}}<br>
-                    rear_cross_traffic_alert:{{rear_cross_traffic_alert}}<br>
-                    lane_departure_warning:{{lane_departure_warning}}<br>
-                    adaptive_cruise_control:{{adaptive_cruise_control}}<br>
-                    collision_warning:{{collision_warning}}<br>
-                    rear_cross_traffic_alert:{{rear_cross_traffic_alert}}<br>
-                    lane_departure_warning:{{lane_departure_warning}}<br>
-                    adaptive_cruise_control:{{adaptive_cruise_control}}<br>
-                    collision_warning:{{collision_warning}}<br>
-                    {{/with}}
-               </div>
-               <div>
-                    <b> engine:</b>
-                    {{#with engine}}<br>
-                    type:{{type}},
-                    displacement:{{displacement}},
-                    horsepower:{{horsepower}},
-                    torque:{{torque}}
-                    <div>
-                         <em> transmission:</em>
-                         {{#with transmission}}<br>
-                         type:{{type}},
-                         gears:{{gears}}
-                         {{/with}}
-                    </div>
-                    {{/with}}
-               </div>
-               <div>
-                    <b> fuel_economy:</b>
-                    {{#with fuel_economy}}<br>
-                    city:{{city}};
-                    highway:{{highway}};
-                    combined: {{combined}}
-                    {{/with}}
-               </div>
-               <div>
-                    <b> price:</b>
-                    {{#with fprice}}<br>
-                    base:{{base}}<br>
-                    destination:{{destination}}<br>
-                    <div>
-                         <em> options:</em>
-                         {{#with options}}<br>
-                         navigation:{{navigation}}
-                         moonroof: {{moonroof}}
-                         premium_paint:{{premium_paint}}
-                         {{/with}}
-                         <h4>total:</h4> {{total}}
-                    </div>
-                    {{/with}}
-               </div>
           </div>
-
-          {{/with}}
-          {{/with}}
-
      </div>
+     <div>
+          <b> safety:</b>
+          {{#with safety}}<br>
+          <div>
+               <b> airbags:</b>
+               {{#with airbags}}<br>
+               front:{{front}},
+               side:{{side}},
+               knee:{{knee}},
+               rear: {{rear}},
+               {{/with}}
+          </div>
+          <div>
+               <b> assistance:</b>
+               {{#with assistance}}<br>
+               blind_spot_monitoring:{{blind_spot_monitoring}}<br>
+               rear_cross_traffic_alert:{{rear_cross_traffic_alert}}<br>
+               lane_departure_warning:{{lane_departure_warning}}<br>
+               adaptive_cruise_control:{{adaptive_cruise_control}}<br>
+               collision_warning:{{collision_warning}}<br>
+               rear_cross_traffic_alert:{{rear_cross_traffic_alert}}<br>
+               lane_departure_warning:{{lane_departure_warning}}<br>
+               adaptive_cruise_control:{{adaptive_cruise_control}}<br>
+               collision_warning:{{collision_warning}}<br>
+               {{/with}}
+          </div>
+     </div>
+     <div>
+          <b> engine:</b>
+          {{#with engine}}<br>
+          type:{{type}},
+          displacement:{{displacement}},
+          horsepower:{{horsepower}},
+          torque:{{torque}}
+          <div>
+               <em> transmission:</em>
+               {{#with transmission}}<br>
+               type:{{type}},
+               gears:{{gears}}
+               {{/with}}
+          </div>
+          {{/with}}
+     </div>
+     <div>
+          <b> fuel_economy:</b>
+          {{#with fuel_economy}}<br>
+          city:{{city}};
+          highway:{{highway}};
+          combined: {{combined}}
+          {{/with}}
+     </div>
+     <div>
+          <b> price:</b>
+          {{#with price}}<br>
+          base:{{base}}<br>
+          destination:{{destination}}<br>
+          <div>
+               <em> options:</em>
+               {{#with options}}<br>
+               navigation:{{navigation}}
+               moonroof: {{moonroof}}
+               premium_paint:{{premium_paint}}
+               {{/with}}
+               <h4>total:</h4> {{total}}
+          </div>
+          {{/with}}
+     </div>
+     {{/with}}
+     {{/with}}
+</div>
