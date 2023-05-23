@@ -1,0 +1,61 @@
+<div>
+     <div>
+          <h2>Known_for</h2>
+          <ul>
+               <h3>
+                    <li>'Theory of Relativity'</li><br>
+                    <li>'Photoelectric Effect'</li><br>
+                    <li>'Brownian Motion'</li><br>
+               </h3>
+          </ul>
+     </div>
+     <div>
+          {{#each Education}}
+          <h3><b> education:</b></h3>
+          <strong>degree:</strong> {{degree}}<br>
+          <strong>field:</strong>{{field}}<br>
+          <strong>institution:</strong> {{institution}}<br>
+          <strong>year:</strong> {{year}}
+          {{/each}}
+     </div>
+     <div>
+          <h3><b>Notable_publications </b></h3>
+          {{#each notable_publications}}
+          <b>title:</b>{{title}}<br>
+          <b>year:</b>{{year}}<br>
+          <b>publisher:</b>{{publisher}}<br>
+          {{/each}}
+     </div>
+     <div>
+          <h3><b> Partners:</b></h3>
+          {{#each partners}}
+          <b> {{name}}</b> {{relationship}} {{years}}<br>
+          {{/each}}
+
+     </div>
+     <div>
+          <h3><b> Awards</b></h3>
+          {{#each awards}}
+          <b>title:</b>{{title}}<br>
+          <b>year:</b>{{year}}<br>
+          <b> description:</b>{{ description}}<br>
+          {{/each}}
+     </div>
+     <div>
+          <h3><b> Major_discoveries</b></h3>
+          {{#each major_discoveries}}
+          <b>title:</b>{{title}}<br>
+          <b>year:</b>{{year}}<br>
+          <b> description:</b>{{ description}}<br>
+          {{/each}}
+     </div>
+     <div>
+          <h3><b> Contributions</b></h3>
+          {{#with contributions}}
+          <b>title:</b>{{title}}<br>
+          <b> description:</b>{{ description}}<br>
+          <b>year:</b>{{year}}<br>
+          <b>field:</b>{{field}}<br>
+          {{/with}}
+     </div>
+</div>
