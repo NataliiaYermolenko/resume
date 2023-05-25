@@ -469,6 +469,17 @@ router.get('/task21', function (req, res) {
           solid: 'Open page',
           outline: 'Add to cart',
         },
+
+
+
+
+
+
+
+
+
+
+
       },
       second: {
         title: 'Stack Overflow',
@@ -498,7 +509,7 @@ router.get('/task21', function (req, res) {
       },
       header_text: 'Sections',
       button: {
-        text: 'Learn more',
+        text: 'learn more',
       },
     },
     paragraph: {
