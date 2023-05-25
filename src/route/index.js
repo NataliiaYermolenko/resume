@@ -470,16 +470,6 @@ router.get('/task21', function (req, res) {
           outline: 'Add to cart',
         },
 
-
-
-
-
-
-
-
-
-
-
       },
       second: {
         title: 'Stack Overflow',
@@ -522,7 +512,7 @@ router.get('/task21', function (req, res) {
       },
       list_name: [
         {
-          text: 'Github',
+          text: 'Github'
           url: 'https://github.com/',
         },
         {

@@ -4,50 +4,75 @@
           {{#with heading}}
           <div>
                {{#with main}}
-               {{>heading
-               title=heading.title
-               text=heading.text
-               solid=heading.solid
-               outline=heading.outline
-               }}
+               <div class="card">
+                    <div class="card-body">
+                         <div>
+                              <h1>{{title}}</h1>
+                         </div>
+                         <br>
+                         <span class="display-7">{{text}} </span>
+                         <br>
+                         {{#with button_text}}
+                         <div>
+                              <button class="btn btn-primary">{{solid}}</button>
+                         </div>
+                         <br>
+                         <div>
+                              <button class="btn btn-outline-primary">{{outline}}</button>
+                         </div>
+                         {{/with}}
+                    </div>
+               </div>
                {{/with}}
           </div>
           <br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
           <div>
 
                {{#with second}}
-               {{>second
-               title=second.title
-               text=second.text
-               solid=second.solid
-               outline=second.outline
-               }}
+               <div class="card">
+                    <div class="card-body">
+                         <div>
+                              <h2>'Stack Overflow'</h2>
+                         </div>
+                         <br>
+                         <span class="display-7">'First-class functions'</span>
+                         {{#with button_text}}
+                         <div>
+                              <button class="btn btn-secondary">Open page</button>
+                         </div>
+                         <br>
+                         <div>
+                              <button class="btn btn-outline-secondary">'Add to cart'</button>
+                         </div>
+                         {{/with}}
+                    </div>
+               </div>
                {{/with}}
           </div>
 
           <br>
           <div>
                {{#with subblock}}
-               {{>subblock
-               title=subblock.title
-               text=subblock.text
-               solid=subblock.solid
-               outline=subblock.outline
-               }}
+               <div class="card">
+                    <div class="card-body">
+                         <div>
+                              <h3>'JavaScript Weekly'</h3>
+                         </div>
+                         <br>
+                         <span class="display-7">'Prototype-based inheritance newsletter'</span>
+                         <br>
+                         {{#with button_text}}
+                         <div>
+                              <button class="btn btn-dark">Open page</button>
+                         </div>
+                         <br>
+                         <div>
+                              <button class="btn btn-outline-dark">'Add to cart'</button>
+                         </div>
+                         {{/with}}
+                    </div>
+               </div>
                {{/with}}
           </div>
 
@@ -58,37 +83,89 @@
      <br>
      <div>
           <div>
-               {{#with nested_display}}
-               {{>nested
-               title=nested_display.title}}
-               {{#with children_display}}
-               <br>
-               {{>children
-               title=children_display.title
-               text=children_display.text}}
-               {{/with}}
+
+               <div class="card">
+                    <div class="card-body">
+                         {{#with nested_display}}
+                         <div class="display-1">{{title}}</div>
+                         <div>
+
+                              <div class="card">
+                                   <div class="card-body">
+                                        {{#with children_display }}
+                                        <div>
+                                             <div class="display-4">{{title}}</div>
+                                        </div>
+                                        <div class="display-7">{{text}}</div>
+                                        <br>
+                                        {{#with button}}
+                                        <div>
+                                             <button class="btn btn-warning">{{text}}</button>
+                                        </div>
+                                        {{/with}}
+                                        {{/with}}
+                                   </div>
+                              </div>
+
+                              <br>
+                              <div>
+
+                                   <span class="display-7">{{header_text}}</span>
+                                   <br>
+                                   {{#with button}}
+                                   <div>
+                                        <button class="btn btn-info btn-sm">{{text}}</button>
+                                   </div>
+                                   {{/with}}
+                              </div>
+
+                         </div>
+
+
+                         {{/with}}
+                    </div>
+
+               </div>
+
 
           </div>
-          {{/with}}
+
      </div>
      <hr>
      <div>
           {{#with paragraph}}
-          {{>paragraph
-          title=paragraph.title
-          text=paragraph.text
-          }}
+          <div>
+               <span class="display-5">{{title}}</span>
+               <br>
+               <span class="text-muted">{{text}}</span>
+          </div>
           <br>
-
-          {{#each list_name}}
-          {{>list
-          text=list_name.text
-          url=list_name.url
-          }}
-          {{/each}}
+          <div>
+               {{#with button}}
+               <a href="https://google.com" class="btn btn-link">Open link page</a>
+               {{/with}}
+          </div>
+          <br>
           {{/with}}
      </div>
 
 
-</div>
+     <div class="card">
+          <div class="card-body">
+
+               <div>
+                    <ul>
+                         <li>
+                              <a href='https://github.com/' class="btn btn-link">Github</a>
+                         </li>
+                         <li>
+                              <a href='https://getbootstrap.com/' class="btn btn-link">Bootstrapgit</a>
+                         </li>
+
+                    </ul>
+               </div>
+
+          </div>
+     </div>
+
 </div>
