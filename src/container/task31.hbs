@@ -1,18 +1,29 @@
 <main>
      <section class="row">
           <div class="col-10">
-               <div>
+               <div class="row">
                     {{#with navigation}}
                     {{#each links}}
-                    <a href="{{href}}">{{text}}</a>
+                    <div class="col"><a href="{{href}}">{{text}}</a></div>
                     {{/each}}
                     {{#with button}}
-                    <a href="{{href}}" class="btn btn-primary">{{text}}</a>
+                    <div class="col"><a href="{{href}}" class="btn btn-primary">{{text}}</a></div>
                     {{/with}}
                     {{/with}}
                </div>
           </div>
      </section>
+     <div class="nav">
+          {{#with navigation}}
+          {{#each links}}
+          <div class="nav-item"><a href="{{href}}" class="nav-link">{{text}}</a></div>
+          {{/each}}
+          {{#with button}}
+          <div class="nav-item"><a href="{{href}}" class="btn btn-primary">{{text}}</a></div>
+          {{/with}}
+          {{/with}}
+     </div>
+
      <hr>
      <br />
 
@@ -30,8 +41,9 @@
      <div>
           {{#with city}}
           <h2>{{title}}</h2>
-          {{#each cards}}
           <section class="row">
+               {{#each cards}}
+
                <div class="col-6">
                     <div class="card">
                          <img class="card-img-top" src="https://picsum.photos/400/200" alt="{{alt}}">
@@ -44,8 +56,9 @@
                          </div>
                     </div>
                </div>
+
+               {{/each}}
           </section>
-          {{/each}}
           {{/with}}
      </div>
      <hr>
