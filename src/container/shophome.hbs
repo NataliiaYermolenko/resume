@@ -1,32 +1,56 @@
-<main class="p-2">
-     <div class="row">
-
+{{#with navigation}}
+<div class="row">
+     {{#each links}}
+     <div class="col-2 m-2">
           <div class="nav">
                <div class="nav-item">
-                    {{#with navigation}}
-                    {{#each links}}
-                    <div class="col-5 m-2">
-                         <a href="{{href}}" class="nav-link">{{text}}</a>
-                    </div>
-                    {{/each}}
-                    {{/with}}
-
+                    <a href="{{href}}" class="nav-link aktive">{{text}}</a>
                </div>
-
 
           </div>
      </div>
+     {{/each}}
+     <div class="nav-item">
+          <a href="#" class="nav-link disabled">disabled</a>
      </div>
-</main>
+</div>
+
+{{/with}}
+<hr>
+{{#with newsBlock}}
+
+<div class="text-center display-1">{{title}}</div>
+<section class="row">
+     {{#each cards}}
+     <div class="col-3">
+          <div class="card">
+               <div clas="card-body"></div>n
+               <div class="card text-bg-secondary">
+                    <div class="display-6">{{title}}</div>
+                    {{#if isTop}}
+                    <span class="bage text-bg-warning rounded-pill text-uppercase">Top</span>
+                    {{/if}}
+                    {{#if isNew}}
+                    <span class="bage text-bg-warning rounded-pill text-uppercase">Top</span>
+                    {{/if}}
+                    <p class="text-muted">{{description}}</p>
+               </div>
+
+          </div>
+          {{/each}}
+</section>
+{{/with}}
 
 
-============================
-<!--  <div class="nav-item">
-                    <a href="#" class="nav-link">Link</a>
-               </div>
-               <div class="nav-item">
-                    <a href="#" class="nav-link">Link</a>
-               </div>
-               <div class="nav-item">
-                    <a href="#" class="nav-link">Link</a>
-               </div>-->
+
+
+<!--<div class="row"></div>
+<div class="col-12">
+     <button class="btn btn-primary rounded-pill m-5">click me</button>
+     <button class="btn btn-primary rounded-pill m-5 my-3 ms-0">click me</button>
+     <div class="alert alert-dark">
+          <h6 class="m=0">Hello world <span class="bage text-bg-warning rounded-pill text-uppercase">Top</span>
+          </h6>
+
+     </div>
+</div>-->
