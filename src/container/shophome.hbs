@@ -25,8 +25,8 @@
      {{#each cards}}
      <div class="col-3">
           <div class="card">
-               <div clas="card-body"> </div>
-               <div class="card text-bg-secondary">
+               <div clas="card-body"></div>
+               <div class="card text-bg-dark">
                     <div class="List-group-item">
                          {{#if isTop}}
                          <span class="bage text-bg-danger rounded-pill text-uppercase">top</span>
@@ -34,36 +34,90 @@
                          {{#if isNew}}
                          <span class="bage text-bg-success rounded-pill text-uppercase">нова</span>
                          {{/if}}
-                         <p class="text-muted">{{description}}</p>
+                         <p class="text-muted">
+                              <font color="ffffff">{{description}}</font>
+                         </p>
                     </div>
+
                </div>
           </div>
      </div>
      {{/each}}
 </section>
 {{/with}}
-<hr>
+
+<HR>
+{{#with goodsBlock}}
+<section class="row">
+     <div class="col-12">
+          <div class="nav nav-tabs">
+               <div class="nav-item">
+                    <a href="#" class="nav-link active">Electronics</a>
+               </div>
+               <div class="nav-item">
+                    <a href="#" class="nav-link">Home & Kitchen</a>
+               </div>
+               <div class="nav-item">
+                    <a href="#" class="nav-link">Clothing & Accessories</a>
+               </div>
+               <div class="nav-item">
+                    <a href="#" class="nav-link disable">Toys & Games</a>
+               </div>
+          </div>
+     </div>
+</section>
 
 
 
 
-<div class="nav">
-     <div class="nav-tabs">
+<section class="row">
+     {{#each cards}}
+     <div class="col-4">
+          <div class="card">
+               <img class="card-img-top" src="https://picsum.photos/400/200" alt="{{alt}}">
+               <div clas=" card-body"></div>
+               <h5 class="card-title">{{title}}</h5>
+               <div class="List-group-item">
+                    {{#if isHot}}
+                    <span class="bage text-bg-warning rounded-pill text-uppercase">top</span>
+                    {{/if}}
+                    {{#if isNew}}
+                    <span class="bage text-bg-primary rounded-pill text-uppercase">нова</span>
+                    {{/if}}
+               </div>
+               <p class="text-muted">{{description}}</p>
 
-
-          {{#with newsBlock}}
-          {{#each tabs}}
-          {{#if isActive}}
-          <div class="nav-item"><a href="#" class="nav-link active">{{text}}</a></div>
-          {{else}}
-          <div class="nav-item"><a href="#" class="nav-link disabled">{{text}}</a></div>
-          {{/if}}
-          {{/each}}
-          <!-- {{#with button}}
-               <div class="nav-item"><a href="#" class="btn btn-primary">{{text}}</a></div>
-               {{/with}}-->
-          {{/with}}
-
+          </div>
 
      </div>
+     {{/each}}
+</section>
+{{/with}}
+
+
+<HR>
+{{#with subscribe}}
+<div class="row">
+     {{#each cards}}
+     <div class="col-12">
+          <div class="card">
+               <div clas="card-body">
+                    <div class="card text-bg-success">
+                         <div class="card-header">
+                              <h2>{{header}}</h2>
+                         </div>
+
+
+                         <h6 class="text-muted">{{description}}</h6>
+
+                         <div class="col-2"></div>
+                         <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                    </div>
+
+
+               </div>
+          </div>
+     </div>
+     {{/each}}
 </div>
+{{/with}}
