@@ -484,7 +484,7 @@ router.get('/shophome', function (req, res) {
           description:
             'As the world continues to grapple with the ongoing COVID-19 pandemic, Europe begins its vaccination rollout, with healthcare workers and the elderly among the first to receive the vaccine.',
           isTop: false,
-          isNew: false,
+          Top: false,
         },
         {
           title: 'Tesla Stock Surges After Record Sales',
