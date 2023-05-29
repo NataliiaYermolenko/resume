@@ -95,29 +95,28 @@
 {{/with}}
 
 
-<HR>
+
 {{#with subscribe}}
-<div class="row">
-     {{#each cards}}
+<p>
+
+</p>
+<section class="row">
+     {{#each buttons}}
      <div class="col-12">
           <div class="card">
-               <div clas="card-body">
-                    <div class="card text-bg-success">
-                         <div class="card-header">
-                              <h2>{{header}}</h2>
-                         </div>
 
+               <div clas="card-body"></div>
+               <div class="card text-bg-dark">
+                    <h2 class="text-header">{{header}}</h2>
 
-                         <h6 class="text-muted">{{description}}</h6>
-
-                         <div class="col-2"></div>
-                         <a href="{{link}}" class="btn btn-primary">{{text}}</a>
-                    </div>
-
+                    <p class="text-muted">
+                         <font color="ffffff">{{description}}</font>
+                    </p>
+                    <a href="{{link}}" class="btn btn-primary">{{text}}</a>
 
                </div>
           </div>
      </div>
      {{/each}}
-</div>
+</section>
 {{/with}}

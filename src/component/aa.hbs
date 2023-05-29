@@ -381,3 +381,29 @@
 {{/with}}
 </div>
 <hr>
+<HR>
+{{#with subscribe}}
+<div class="row">
+     {{#each cards}}
+     <div class="col-12">
+          <div class="card">
+               <div clas="card-body">
+                    <div class="card text-bg-success">
+                         <div class="card-header">
+                              <h2>{{header}}</h2>
+                         </div>
+
+
+                         <h6 class="text-muted">{{description}}</h6>
+
+                         <div class="col-2"></div>
+                         <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                    </div>
+
+
+               </div>
+          </div>
+     </div>
+     {{/each}}
+</div>
+{{/with}}
