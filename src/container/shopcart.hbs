@@ -427,7 +427,7 @@
      <div>
           {{#with total}}
           <div class="display-5 pb-3">{{title}}</div>
-          <div class="display-3 pb-2">{{amount}}</div>
+          <div class="display-6 pb-2">{{amount}}</div>
           <div class="display-6 pb-2">{{delivery}}</div>
           {{#each buttons}}
           {{#if isSuccess}}
@@ -445,9 +445,61 @@
                     {{/with}}
                </div>
           </div>
+     </div>
+     <hr>
+     <div class="m-2 pb-3">
+          {{#with goodsOtherBlock}}
+          <div class="display-3 pb-3">{{title}}</div>
+          <section class="row g-1">
+               {{#each cards}}
+               <div class="col-4">
+                    <div class="card m-2 ">
+                         <img class="card-img-top" src="https://picsum.photos/400/200" alt="...">
+                         <div clas=" card-body"></div>
+                         <h5 class="card-title p-2">{{title}}</h5>
+                         <div class="List-group-item">
+                              {{#if isHot}}
+                              <span class="bage text-bg-warning rounded-pill text-uppercase m-3 p-2">top</span>
+                              {{/if}}
+                              {{#if idNew}}
+                              <span class="bage text-bg-primary rounded-pill text-uppercase m-3 p-2">нова</span>
+                              {{/if}}
+                         </div>
+                         <p class="text-muted ps-2 pb-2">{{description}}</p>
+                    </div>
+               </div>
+               {{/each}}
+          </section>
+          {{/with}}
+     </div>
 
-          <hr>
-          <div class="row">
-               <div class="col-12">
+     <div class="row g-1">
+          {{#with subscribe}}
+
+          <div class="col-12">
+               <div class="card text-bg-dark mb-3">
+                    <div class="card-header display-4">{{header}}</div>
+                    <div class="card-body">
+                         <p class="card-text display-6">{{description}}</p>
+                    </div>
+                    <div class="col-4">
+                         {{#each buttons}}
+                         <a href="{{link}}" class="btn btn-primary mb-2">{{text}}</a>
+                         {{/each}}
+                    </div>
+               </div>
+          </div>
+          {{/with}}
+     </div>
+
+     {{#each footer}}
+     <div class="nav">
+          {{#each links}}
+          <div class="nav-item">
+               <a href="{{link}}" class="nav-link">{{text}}</a>
+          </div>
+          {{/each}}
+     </div>
+     {{/each}}
 
 </main>
