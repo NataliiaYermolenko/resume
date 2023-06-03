@@ -555,6 +555,8 @@ router.get('/js', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('js', {
+
+    layout: 'js',
     name: 'JavaScript',
     description:
       'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
@@ -627,6 +629,7 @@ router.get('/js', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
 
 
 
@@ -885,7 +888,7 @@ router.get('/task31', function (req, res) {
         {
           name: 'Stark Industries',
           link: 'https://www.starkindustries.com/',
-=======
+
 router.get('/task21', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -957,6 +960,7 @@ router.get('/task21', function (req, res) {
 
 
 // ================================================================
+
 
 
 // Підключаємо роутер до бек-енду
