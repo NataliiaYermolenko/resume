@@ -1,0 +1,95 @@
+<div>
+
+     <div>
+          <h1>{{name}}</h1><br>
+          <h2>{{description}}</h2><br>
+
+     </div>
+
+     <div>
+          {{#with history}}
+          <h3>{{year}}</h3>
+          <h3>founder:{{founder}}</h3> <br>
+          {{/with}}
+          <hr>
+     </div>
+     <div>
+          <b>Types:</b>
+          {{#each types}}
+          <ul>
+               <li>{{this}}</li>
+          </ul>
+          {{/each }}
+     </div>
+     <div>
+          {{#with syntax }}
+          <div>
+               <b>variables:</b>
+               {{#each variables}}
+               <ul>
+                    <li>{{this}}</li>
+               </ul>
+               {{/each }}
+          </div>
+          <div>
+               <b>functions:</b>
+               {{#each functions}}
+               <ul>
+                    <li>{{this}}</li>
+               </ul>
+               {{/each }}
+          </div>
+          <div>
+               <b>conditionals:</b>
+               {{#each conditionals}}
+               <ul>
+                    <li>{{this}}</li>
+               </ul>
+               {{/each }}
+          </div>
+          <div>
+               <b>loops:</b>
+               {{#each loops}}
+               <ul>
+                    <li>{{this}}</li>
+               </ul>
+               {{/each }}
+          </div>
+          <div>
+               <b>classes:</b>
+               {{#each classes}}
+               <ul>
+                    <li>{{this}}</li>
+               </ul>
+               {{/each }}
+          </div>
+          {{/with}}
+     </div>
+
+     <div>
+          <b>features:</b>
+          {{#each features}}
+          <ul>
+               <li>{{this}}</li>
+          </ul>
+          {{/each }}
+     </div>
+     <div>
+          <b>libraries:</b>
+          {{#each libraries}}
+          <ul>
+               <li>{{this}}</li>
+          </ul>
+          {{/each }}
+     </div>
+     <div>
+          <b>community:</b>
+          <div>
+               {{#each community}}
+               {{name}},
+               <em>{{type}} </em> <br>
+               {{/each }}
+          </div>
+
+     </div>
+</div>
