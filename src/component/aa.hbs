@@ -1,8 +1,7 @@
-({{projectAmount}})-33
+<!--({{projectAmount}})-33
 ({{stacksAmount}})-45
 {{else}}
 <b>{{company.name}}</b> -28
-
 {{#with footer}}
 <footer>
 
@@ -23,7 +22,10 @@
           <em>address {{../header.address}} </em>
      </div>
 </footer>
+
+=======
 {{/with}} --big27
+
 <!--===================================================-->
 
 <main class="p-5">
@@ -98,6 +100,13 @@
                     </div>
                </div>
           </div>
+=======
+layoout defalt
+{{#with header}}
+<header>
+     <div>
+          <h1>{{name.firstname}} {{name.lastname}}</h1>
+
      </div>
      </div>
 </main>
@@ -407,3 +416,50 @@
      {{/each}}
 </div>
 {{/with}}
+=======
+{{> footer social=footer.social
+firstname=header.name.firstname
+lastname=header.name.lastname
+address=header.address}} 45-50
+
+
+
+layoout defalt
+{{#with header}}
+<header>
+     <div>
+          <h1>{{name.firstname}} {{name.lastname}}</h1>
+     </div>
+     <div>
+          {{position}}
+     </div>
+     <br>
+     <div>
+          <em>{{salary}}</em>
+     </div>
+     <br>
+     <hr>
+     <div>
+          <address>{{address}}</address>
+     </div>
+     <br>
+</header>
+{{/with}}
+{{>nav}}
+<br>
+<hr> 18-42
+<br>
+{{> footer social=footer.social
+firstname=header.name.firstname
+lastname=header.name.lastname
+< task31
+address=header.address}} 45-50-->
+
+
+
+
+
+
+
+
+
