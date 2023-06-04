@@ -1,0 +1,53 @@
+<div>
+     <h1><em>{{name}}</em></h1>
+</div>
+<hr>
+<div>
+
+     {{#each users}}
+     users:
+     id:{{id}} <br>
+     name:{{name}} <br>
+     gender: {{gender}}<br>
+     age:{{age}} <br>
+     <div>
+
+          {{#each friends}}
+          <h3>friends:</h3>
+          id:{{id}} <br>
+          name:{{name}} <br>
+          gender: {{gender}}<br>
+          age:{{age}} <br>
+          <div>
+               {{#each mutual_friends}}
+               <b> mutual_friends:</b>
+               id:{{id}} <br>
+               name:{{name}} <br>
+               gender: {{gender}}<br>
+               age:{{age}} <br>
+               {{/each}}
+          </div>
+
+          <div>
+               {{#each groups}}
+               <b> groups:</b>
+               id:{{id}} <br>
+               name:{{name}} <br>
+               description:<p>{{description}}</p> <br>
+               <div>
+                    {{#each members}}
+                    <b> members:</b>
+                    id:{{id}} <br>
+                    name:{{name}} <br>
+                    gender: {{gender}}<br>
+                    age:{{age}} <br>
+                    {{/each}}
+               </div>
+
+
+               {{/each}}
+          </div>
+          {{/each}}
+     </div>
+     {{/each}}
+</div>

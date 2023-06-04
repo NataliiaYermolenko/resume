@@ -1,0 +1,83 @@
+<div>
+     {{#with heading}}
+     <div>
+          {{#with main}}
+          {{>heading
+          title=heading.title
+          text=heading.text
+          solid=heading.solid
+          outline=heading.outline
+          }}
+          {{/with}}
+     </div>
+     <br><br>
+     <div>
+          {{#with second}}
+          {{>second
+          title=second.title
+          text=second.text
+          solid=second.solid
+          outline=second.outline
+          }}
+          {{/with}}
+     </div>
+
+
+     <div>
+          {{#with subblock}}
+          {{>subblock
+          title=subblock.title
+          text=subblock.text
+          solid=subblock.solid
+          outline=subblock.outline
+          }}
+          {{/with}}
+     </div>
+
+
+     {{/with}}
+</div>
+<!--
+<div>
+     <div>
+          {{#with nested_display}}
+          {{>nested
+          title=nested_display.title}}
+          {{#with children_display}}
+          {{>children
+          title=children_display.title
+          text=children_display.text}}
+
+          {{>button
+          text=button.text}}
+          {{/with}}
+     </div>
+     <div>
+
+          {{>header
+          text=header_text.text}}
+     </div>
+     {{/with}}
+</div>
+<div>
+     {{#with paragraph}}
+     {{>paragraph
+     title=paragraph.title
+     text=paragraph.text
+     }}
+     {{>button1
+     text=button1.text
+     url=button1.url
+     }}
+     {{#each list_name}}
+     {{>list
+     text=list_name.text
+     url=list_name.url
+     }}
+     {{/each}}
+     {{/with}}
+</div>
+
+
+</div>
+<
