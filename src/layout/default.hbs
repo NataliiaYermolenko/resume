@@ -19,6 +19,19 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
+<<<<<<< HEAD
+<body class="p-5">
+  {{#with header}}
+  <header>
+    <div class="mb2">
+      <h1>{{name.firstname}} {{name.lastname}}</h1>
+    </div>
+    <div class="mb2">
+      {{position}}
+    </div>
+    <br>
+    <div class="mb2">
+=======
 
 <body>
   {{#with header}}
@@ -31,10 +44,20 @@
     </div>
     <br>
     <div>
+>>>>>>> 5b26eeeba8e84a8a547fbc35c47edd39f6de6758
       <em>{{salary}}</em>
     </div>
     <br>
     <hr>
+<<<<<<< HEAD
+    <div class="mb2">
+      <address>{{address}}</address>
+    </div>
+    <br>
+    <hr class="my-5" </header>
+    {{/with}}
+    <div class="mb-5">
+=======
     <div>
       <address>{{address}}</address>
     </div>
@@ -47,9 +70,21 @@
 
 
 
+>>>>>>> 5b26eeeba8e84a8a547fbc35c47edd39f6de6758
 
-  {{{body}}}
+      {{>nav}}
+    </div>
 
+<<<<<<< HEAD
+    {{{body}}}
+
+    {{> footer social=footer.social
+    firstname=header.name.firstname
+    lastname=header.name.lastname
+    address=header.address}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+=======
  
 
 <<<<<<< HEAD
@@ -59,6 +94,7 @@
 >>>>>>> 5b26eeeba8e84a8a547fbc35c47edd39f6de6758
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+>>>>>>> 5b26eeeba8e84a8a547fbc35c47edd39f6de6758
 </body>
 
 </html>
