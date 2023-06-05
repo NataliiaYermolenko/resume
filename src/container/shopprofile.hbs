@@ -3,11 +3,9 @@
      <div class="nav">
           {{#each links}}
           <div class="nav-item">
-               {{#if href}}
+
                <a href="{{href}}" class="nav-link">{{text}}</a>
-               {{else}}
-               <a href="{{href}}" class="nav-link disabled">{{text}}</a>
-               {{/if}}
+
           </div>
           {{/each}}
      </div>
@@ -53,7 +51,7 @@
      <hr>
      {{#with purchase}}
 
-     <section>
+     <section> <!--з container не працює-->
           {{#each itemList}}
           <div class="container">
                <div class="row">
@@ -176,32 +174,40 @@
      </div>
 
      <hr>
-     <div class="row">
+
+
+     <div class="container">
           {{#with recipients}}
-          <div class="col-sm-4">
+          <div class="row justify-content-start">
                {{#each users}}
-               <div class="card mb-2">
-                    <div class="card-body">
-                         <h5 class="card-title">{{name}}</h5>
-                         <p class="card-text">{{phone}}</p>
-                         {{#with button}}
-                         <a href="{{link}}" class="btn btn-primary">{{text}}</a>
-                         {{/with}}
+               <div class="col-4">
+                    <div class="card mb-2">
+                         <div class="card-body">
+                              <h5 class="card-title">{{name}}</h5>
+                              <p class="card-text">{{phone}}</p>
+                              {{#with button}}
+                              <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                              {{/with}}
+                         </div>
                     </div>
+
                </div>
                {{/each}}
           </div>
           {{/with}}
+
      </div>
 
      <hr>
-     <container>
+
+
+     <div class="container">
           {{#with contacts}}
-          <div class="dishlay-5">{{title}}</div>
-          <diw class="row">
-               <div class="col-auto ">
-                    {{#each contactData}}
-                    <div class="card mt-2">
+          <div class="display-5">{{title}}</div>
+          <div class="row justify-content-start">
+               {{#each contactData}}
+               <div class="col-4">
+                    <div class="card mb-2">
                          <div class="card-body">
                               <div class="dishlay-6">{{title}}</div>
                               <div class="dishlay-6">{{value}}</div>
@@ -218,17 +224,14 @@
                               {{/with}}
                          </div>
                     </div>
-                    {{/each}}
                </div>
-          </diw>
-          {{/with}}
-     </container>
+               {{/each}}
+               </diw>
+               {{/with}}
+          </div>
+     </div>
      {{/with}}
-
-
-
-     <!--не знаю як-->
      {{#each footer}}
-     <a href="{{link}}" class="btn btn-link">{{text}}</a>
+     <a href="{{link}}" class="btn btn-link">{{text}}</a><!--не знаю як-->
      {{/each}}
 </main>
