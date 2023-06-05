@@ -1,29 +1,29 @@
-<div class="row g-0">
+<div class="container">
+     <div class="row justify-content-start">
+          <div class="col-2">
+               <img src="{{image}}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-4">
+               <h5 class="card-title">{{name}}</h5>
+               <p class="card-text">{{description}}</p>
+          </div>
+          <div class="col-3">
+               {{#with price}}
+               <p class="card-text text-muted">{{title}} {{value}}</p>
+               {{/with}}
+          </div>
+          <div class="col-1">
+               <p class="card-text">{{amount}}</p>
+          </div>
+          <div class="col-2">
+               {{#each buttons}}
+               {{#if isPrimary}}
+               <button class="btn btn-primary mb-2">{{text}}</button>
+               {{else}}
+               <button class="btn btn-outline-danger mt-2 pb-2">{{text}}</button>
+               {{/if}}
+               {{/each}}
 
-     <div class="card mb-3" style="max-width: 540px;"></div>
-     <div class="col-md-4">
-          <img src="{{image}}" class="img-fluid rounded-start" alt="...">
-     </div>
-     <div class="col-md-8">
-          <div class="row">
-               <div class="card-body">
-
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">{{description}}</p>
-                    {{#with price}}
-                    <p class="card-text text-muted">{{title}} {{value}}</p>
-                    {{/with}}
-                    <p class="card-text">{{amount}}</p>
-                    {{#each buttons}}
-                    {{#if isPrimary}}
-                    <button class="btn btn-primary mb-2">{{text}}</button>
-                    {{else}}
-                    <button class="btn btn-danger mt-2 pb-2">{{text}}</button>
-                    {{/if}}
-                    {{/each}}
-
-               </div>
           </div>
      </div>
-</div>
 </div>
