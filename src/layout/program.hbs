@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <title>
+          Person page
+     </title>
+     <meta charset='utf-8' />
+     <link href='css/index.css' rel='stylesheet' />
+</head>
+
+<body>
+     <div>
+          {{#with program}}
+          <div>
+               <h1>{{excursion.name}}</h1>
+
+               <address>
+                    <h2> {{excursion.location.city}},
+                         {{excursion.location.country}}
+                    </h2>
+               </address>
+               <hr><br>
+          </div>
+
+
+          {{/with}}
+
+          {{{body}}}
+     </div>
+
+</body>
+
+
+</html>
