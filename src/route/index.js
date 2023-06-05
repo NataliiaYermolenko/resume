@@ -266,190 +266,9 @@ router.get('/work', function (req, res) {
 })
 
 
-  /
-  // ================================================================
 
-  //              ↙ тут вводимо шлях (PATH) до сторінки
-  router.get('/person', function (req, res) {
-    //             ↙ cюди вводимо назву файлу з сontainer
-    res.render('person', {
-      layout: 'person',
-      person: {
-        name: 'Emma Johnson',
-        age: 32,
-        gender: 'Female',
-        address: {
-          street: '123 Main St',
-          city: 'New York',
-          state: 'NY',
-          zip: '10001',
-          country: 'USA',
-        },
-        education: [
-          {
-            degree: 'Bachelor of Science',
-            major: 'Computer Science',
-            university:
-              'Massachusetts Institute of Technology',
-            graduationYear: 2012,
-          },
-        ],
-        workExperience: [
-          {
-            company: 'Google',
-            title: 'Software Engineer',
-            startDate: '2012-06-01',
-            endDate: '2016-12-31',
-            responsibilities: [
-              'Developed new features for Google Maps',
-              'Worked on improving search algorithms',
-            ],
-            year_founded: 1990,
-            industry: 'Technology',
-            employees: [
-              {
-                name: 'John Smith',
-                position: 'CEO',
-                department: 'Executive',
-                projects: [
-                  {
-                    name: 'Project Alpha',
-                    description:
-                      'Developing new software platform',
-                    status: 'In Progress',
-                    teams: [
-                      {
-                        team_name: 'Awesome Team',
-                        team_leader: {
-                          name: 'John Smith',
-                          title: 'Team Leader',
-                          email: 'john.smith@example.com',
-                        },
-                        team_members: [
-                          {
-                            name: 'Alice Johnson',
-                            title: 'Software Engineer',
-                            email:
-                              'alice.johnson@example.com',
-                            skills: ['Java', 'Python', 'SQL'],
-                            projects: [
-                              {
-                                name: 'Project A',
-                                description:
-                                  'Lorem ipsum dolor sit amet',
-                                technologies: [
-                                  'Java',
-                                  'Spring Framework',
-                                ],
-                                team_members: [
-                                  {
-                                    name: 'Bob Lee',
-                                    title:
-                                      'Software Engineer',
-                                  },
-                                  {
-                                    name: 'Cindy Chen',
-                                    title: 'UI Designer',
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    })
-  })
 
 // ================================================================
-
-
-
-router.get('/js', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('js', {
-    name: 'JavaScript',
-    description:
-      'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
-    history: {
-      year: 1995,
-      founder: 'Brendan Eich',
-    },
-    types: [
-      'Number',
-      'String',
-      'Boolean',
-      'Null',
-      'Undefined',
-      'Symbol',
-      'Object',
-    ],
-    syntax: {
-      variables: ['var', 'let', 'const'],
-      functions: ['function'],
-      conditionals: ['if', 'else', 'switch'],
-      loops: ['for', 'while', 'do-while'],
-      classes: ['class'],
-    },
-    features: [
-      'First-class functions',
-      'Closures',
-      'Dynamic typing',
-      'Prototype-based inheritance',
-      'Asynchronous programming with Promises and async/await',
-      'Modules with import/export statements',
-    ],
-    libraries: [
-      'jQuery',
-      'React',
-      'Angular',
-      'Vue',
-      'Node.js',
-      'Express.js',
-      'Lodash',
-      'Moment.js',
-    ],
-    tools: [
-      'Babel',
-      'Webpack',
-      'ESLint',
-      'Jest',
-      'Mocha',
-      'Chai',
-      'Selenium',
-      'Cypress',
-    ],
-    community: [
-      {
-        name: 'Stack Overflow',
-        type: 'forum',
-      },
-      {
-        name: 'JavaScript Weekly',
-        type: 'newsletter',
-      },
-      {
-        name: 'The Changelog',
-        type: 'podcast',
-      },
-      {
-        name: 'CSS-Tricks',
-        type: 'blog',
-      },
-    ],
-  })
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -484,7 +303,7 @@ router.get('/shophome', function (req, res) {
           description:
             'As the world continues to grapple with the ongoing COVID-19 pandemic, Europe begins its vaccination rollout, with healthcare workers and the elderly among the first to receive the vaccine.',
           isTop: false,
-          Top: false,
+          isNew: false,
         },
         {
           title: 'Tesla Stock Surges After Record Sales',
@@ -738,6 +557,10 @@ router.get('/shophome', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+//             
+
+
+// Підключаємо роутер до бек-ендуgi
 
 
 

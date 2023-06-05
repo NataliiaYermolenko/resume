@@ -1,8 +1,7 @@
-({{projectAmount}})-33
+<!--({{projectAmount}})-33
 ({{stacksAmount}})-45
 {{else}}
 <b>{{company.name}}</b> -28
-
 {{#with footer}}
 <footer>
 
@@ -23,227 +22,349 @@
           <em>address {{../header.address}} </em>
      </div>
 </footer>
-{{/with}} --big27
+
+
 <!--===================================================-->
 
-<main class="p-5">
-     <div class="row">
-          <div class="col-12 mb-5">
-               <div class="nav-tabs">
-                    <div class="nav-item зb-5">
-                         <a href="#" class="nav-link">Catalog</a>
-                    </div>
-                    <div class="nav-item">
-                         <a href="#" class="nav-link active">Shop-list</a>
-                    </div>
-                    <div class="nav-item">
-                         <a href="#" class="nav-link active">Shop-list</a>
-                    </div>
+
+<div class="row ">
+     <div class="col-8">
+          <div class="row gy-5 ">
+               {{#with contact}}
+               <div class="col-6">
+                    {{#with surname}}
+                    <label class="form label">{{label}}</label>
+                    <label for="{{label}}" class="visually-hidden">{{label}}</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="{{placeholder}}">
+                    <div class="form-text text-muted">{{caption}}</div>
+                    {{/with}}
                </div>
-
-               <div class="col-5 pe-5">
-                    <div class="pt-2 pb-5">
-                         <div class="card-body pb-5">
-                              <div class="nav flex-colum">
-                                   <div class="nav-item mb-2">
-                                        <div class="card">
-                                             <div class="nav-item">
-                                                  <a href="#" class="nav-link">mein</a>
-                                             </div>
-                                        </div>
-
-                                        <div class="card">
-                                             <div class="nav-item mb-2">
-                                                  <a href="#" class="nav-link active">catalog</a>
-                                             </div>
-
-                                        </div>
-
-                                        <div class="card">
-                                             <div class="nav-item">
-                                                  <a href="#" class="nav-link disabled">FAQ page</a>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
+               <div class="col-6">
+                    {{#with name}}
+                    <label class="form label">{{label}}</label>
+                    <label for="{{label}}" class="visually-hidden">{{label}}</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="{{placeholder}}">
+                    <div class="form-text text-muted">{{caption}}</div>
+                    {{/with}}
                </div>
-               <div class="col-7">
-                    <div class="row">
-                         <div class="col-12">
-                              <ol class="breadcrumb">
-                                   <li class="breadcrumb-item">
-                                        <a href="#">Home</a>
-                                   </li>
-                                   <li class="breadcrumb-item">
-                                        <a href="#">Street</a>
-                                   </li>
-                                   <li class="breadcrumb-item">
-                                        Town
-                                   </li>
-                              </ol>
-                         </div>
-                         <div class="col-12">
-                              <button class="btn btn-primary rounded-pill m-5">click me</button>
-                              <button class="btn btn-primary rounded-pill m-5 my-3 ms-0">click me</button>
-                              <div class="alert alert-dark">
-                                   <h6 class="m=0">Hello world <span
-                                             class="bage text-bg-warning rounded-pill text-uppercase">Top</span>
-                                   </h6>
-
-                              </div>
-                         </div>
-                         <div class=" alert alert-primary">This is impotant!</div>
-                    </div>
+               <div class="col-6">
+                    {{#with phone}}
+                    <label class="form label">{{label}}</label>
+                    <label for="{{label}}" class="visually-hidden">{{label}}</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="{{placeholder}}">
+                    <div class="form-text text-mutedm-2 pb">{{caption}}</div>
+                    {{/with}}
+               </div>
+               <div class="col-6">
+                    {{#with email}}
+                    <label class="form label">{{label}}</label>
+                    <label for="{{label}}" class="visually-hidden">{{label}}</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="{{placeholder}}">
+                    <div class="form-text text-muted m-2 pb2">{{caption}}</div>
+                    {{/with}}
                </div>
           </div>
      </div>
-     </div>
-</main>
 
-{{#with gallery}}
-<p>
-<h2>{{name}}</h2>
-</p>
-<section class="row">
-     {{#each cards}}
-     <div class="col-4">
-          <div class="card">
-               <div clas="card-body"> </div>
-               <div class="List-group-item">
-                    <div ciass="display-6" class="card-header">{{name}} </div>
-                    {{#each items}}
-                    <div class="List-group-item">
-                         <ul>
-                              <li>{{this}}</li>
-                         </ul>
-                    </div>
-                    {{/each}}
+     <!--===================================================-->
+     <div class="col-9">
+          {{#with delivery}}
+          <p class="display-3">{{title}}</p>
+          {{#each select}}
+          <div class="card m-2 p-2">
+               <div class="card-body">
+                    <label class="form label">{{label}}</label>
+                    <select class="form-select">
+                         <option selected>{{placeholder}}</option>
+                         {{#each options}}
+                         <option value="{{value}}"> {{text}}</option>
+                         {{/each}}
+                    </select>
                </div>
 
-          </div>
-     </div>
-     {{/each}}
-</section>
-{{/with}}
-<hr>
-<br />
-
-{{#with relaxion}}
-<div ciass="display-3">{{title}}</div>
-<section class="row gx-5 gy-2">
-     {{#each cards}}
-
-     <div class="col-5">
-          <div class="card">
-               <div clas="card-body">
-                    <div class="card text-bg-secondary">
-                         <div ciass="display-4" class="card-header">{{header}} </div>
-                         <div class="display-6">{{title}}</div>
-                         <p class="text-muted">{{description}}</p>
-                    </div>
-               </div>
-          </div>
 
 
-          <div class="row">
-
-               <div class="nav">
-
-                    <div class="nav-item">
-                         <a href="#" class="nav-link">Link</a>
-                    </div>
-                    <div class="nav-item">
-                         <a href="#" class="nav-link">Link</a>
-                    </div>
-                    <div class="nav-item">
-                         <a href="#" class="nav-link">Link</a>
-                    </div>
-               </div>
-          </div>
-
-
-          ======================================================================
-          <main class="p-5">
-               <div class="row">
-                    <div class="col-12 mb-5">
-                         <div class="nav-tabs">
-                              <div class="nav-item зb-5">
-                                   <a href="#" class="nav-link">Catalog</a>
-                              </div>
-                              <div class="nav-item">
-                                   <a href="#" class="nav-link active">Shop-list</a>
-                              </div>
-                              <div class="nav-item">
-                                   <a href="#" class="nav-link active">Shop-list</a>
-                              </div>
-                         </div>
-
-                         <div class="col-5 pe-5">
-                              <div class="pt-2 pb-5">
-                                   <div class="card-body pb-5">
-                                        <div class="nav flex-colum">
-                                             <div class="nav-item mb-2">
-                                                  <div class="card">
-                                                       <div class="nav-item">
-                                                            <a href="#" class="nav-link">mein</a>
-                                                       </div>
-                                                  </div>
-
-                                                  <div class="card">
-                                                       <div class="nav-item mb-2">
-                                                            <a href="#" class="nav-link active">catalog</a>
-                                                       </div>
-
-                                                  </div>
-
-                                                  <div class="card">
-                                                       <div class="nav-item">
-                                                            <a href="#" class="nav-link disabled">FAQ page</a>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="col-7">
+               <div>
+                    <div class="row g-1"></div>
+                    {{#each goodsBlock}}
+                    <div class="col-12">
+                         <div class="card mb-3">
                               <div class="row">
-                                   <div class="col-12">
-                                        <ol class="breadcrumb">
-                                             <li class="breadcrumb-item">
-                                                  <a href="#">Home</a>
-                                             </li>
-                                             <li class="breadcrumb-item">
-                                                  <a href="#">Street</a>
-                                             </li>
-                                             <li class="breadcrumb-item">
-                                                  Town
-                                             </li>
-                                        </ol>
+                                   <div class="col-3">
+                                        <img src="{{image}}" class="img-fluid rounded-start" alt="...">
                                    </div>
-                                   <div class="col-12">
-                                        <button class="btn btn-primary rounded-pill m-5">click me</button>
-                                        <button class="btn btn-primary rounded-pill m-5 my-3 ms-0">click me</button>
-                                        <div class="alert alert-dark">
-                                             <h6 class="m=0">Hello world <span
-                                                       class="bage text-bg-warning rounded-pill text-uppercase">Top</span>
-                                             </h6>
-
-                                        </div>
-                                   </div>
-                                   <div class=" alert alert-primary">This is impotant!</div>
                               </div>
-                         </div>
-                    </div>
-               </div>
-     </div>
-     </main>
+                              <div class="col-8">
+                                   <div class="card-body">
+                                        <h5 class="card-title">{{name}}</h5>
+                                        <p class="card-text"><small class="text-body-secondary">{{description}}</small>
+                                        </p>
+                                        {{#with price}}
+                                        <p class="card-text">{{title}} {{value}}</p>
+                                        {{/with}}
+                                        <p class="card-text">{{amount}}</p>
+                                        {{#each buttons}}
+                                        {{#if isPrimary}}
+                                        <div class="col-12">
+                                             <button class="btn btn-primary mb-2">{{text}}</button>
+                                        </div>
+                                        {{else}}
+                                        <button class="btn btn-danger mt-2 pb-2">{{text}}</button>
+                                        {{/if}}
+                                        {{/each}}
+                                        =======
+
+                                        <!--===================================================-->
+
+                                        <main class="p-5">
+                                             <div class="row">
+                                                  <div class="col-12 mb-5">
+                                                       <div class="nav-tabs">
+                                                            <div class="nav-item зb-5">
+                                                                 <a href="#" class="nav-link">Catalog</a>
+                                                            </div>
+                                                            <div class="nav-item">
+                                                                 <a href="#" class="nav-link active">Shop-list</a>
+                                                            </div>
+                                                            <div class="nav-item">
+                                                                 <a href="#" class="nav-link active">Shop-list</a>
+                                                            </div>
+                                                       </div>
+
+                                                       <div class="col-5 pe-5">
+                                                            <div class="pt-2 pb-5">
+                                                                 <div class="card-body pb-5">
+                                                                      <div class="nav flex-colum">
+                                                                           <div class="nav-item mb-2">
+                                                                                <div class="card">
+                                                                                     <div class="nav-item">
+                                                                                          <a href="#"
+                                                                                               class="nav-link">mein</a>
+                                                                                     </div>
+                                                                                </div>
+
+                                                                                <div class="card">
+                                                                                     <div class="nav-item mb-2">
+                                                                                          <a href="#"
+                                                                                               class="nav-link active">catalog</a>
+                                                                                     </div>
+
+                                                                                </div>
+
+                                                                                <div class="card">
+                                                                                     <div class="nav-item">
+                                                                                          <a href="#"
+                                                                                               class="nav-link disabled">FAQ
+                                                                                               page</a>
+                                                                                     </div>
+                                                                                </div>
+                                                                           </div>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                       <div class="col-7">
+                                                            <div class="row">
+                                                                 <div class="col-12">
+                                                                      <ol class="breadcrumb">
+                                                                           <li class="breadcrumb-item">
+                                                                                <a href="#">Home</a>
+                                                                           </li>
+                                                                           <li class="breadcrumb-item">
+                                                                                <a href="#">Street</a>
+                                                                           </li>
+                                                                           <li class="breadcrumb-item">
+                                                                                Town
+                                                                           </li>
+                                                                      </ol>
+                                                                 </div>
+                                                                 <div class="col-12">
+                                                                      <button
+                                                                           class="btn btn-primary rounded-pill m-5">click
+                                                                           me</button>
+                                                                      <button
+                                                                           class="btn btn-primary rounded-pill m-5 my-3 ms-0">click
+                                                                           me</button>
+                                                                      <div class="alert alert-dark">
+                                                                           <h6 class="m=0">Hello world <span
+                                                                                     class="bage text-bg-warning rounded-pill text-uppercase">Top</span>
+                                                                           </h6>
+
+                                                                      </div>
+                                                                 </div>
+                                                                 <div class=" alert alert-primary">This is impotant!
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  =======
+                                                  layoout defalt
+                                                  {{#with header}}
+                                                  <header>
+                                                       <div>
+                                                            <h1>{{name.firstname}} {{name.lastname}}</h1>
+
+                                                       </div>
+                                             </div>
+                                        </main>
+
+                                        {{#with gallery}}
+                                        <p>
+                                        <h2>{{name}}</h2>
+                                        </p>
+                                        <section class="row">
+                                             {{#each cards}}
+                                             <div class="col-4">
+                                                  <div class="card">
+                                                       <div clas="card-body"> </div>
+                                                       <div class="List-group-item">
+                                                            <div ciass="display-6" class="card-header">{{name}} </div>
+                                                            {{#each items}}
+                                                            <div class="List-group-item">
+                                                                 <ul>
+                                                                      <li>{{this}}</li>
+                                                                 </ul>
+                                                            </div>
+                                                            {{/each}}
+                                                       </div>
+
+                                                  </div>
+                                             </div>
+                                             {{/each}}
+                                        </section>
+                                        {{/with}}
+                                        <hr>
+                                        <br />
+
+                                        {{#with relaxion}}
+                                        <div ciass="display-3">{{title}}</div>
+                                        <section class="row gx-5 gy-2">
+                                             {{#each cards}}
+
+                                             <div class="col-5">
+                                                  <div class="card">
+                                                       <div clas="card-body">
+                                                            <div class="card text-bg-secondary">
+                                                                 <div ciass="display-4" class="card-header">{{header}}
+                                                                 </div>
+                                                                 <div class="display-6">{{title}}</div>
+                                                                 <p class="text-muted">{{description}}</p>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+
+
+                                                  <div class="row">
+
+                                                       <div class="nav">
+
+                                                            <div class="nav-item">
+                                                                 <a href="#" class="nav-link">Link</a>
+                                                            </div>
+                                                            <div class="nav-item">
+                                                                 <a href="#" class="nav-link">Link</a>
+                                                            </div>
+                                                            <div class="nav-item">
+                                                                 <a href="#" class="nav-link">Link</a>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+
+
+                                                  ======================================================================
+                                                  <main class="p-5">
+                                                       <div class="row">
+                                                            <div class="col-12 mb-5">
+                                                                 <div class="nav-tabs">
+                                                                      <div class="nav-item зb-5">
+                                                                           <a href="#" class="nav-link">Catalog</a>
+                                                                      </div>
+                                                                      <div class="nav-item">
+                                                                           <a href="#"
+                                                                                class="nav-link active">Shop-list</a>
+                                                                      </div>
+                                                                      <div class="nav-item">
+                                                                           <a href="#"
+                                                                                class="nav-link active">Shop-list</a>
+                                                                      </div>
+                                                                 </div>
+
+                                                                 <div class="col-5 pe-5">
+                                                                      <div class="pt-2 pb-5">
+                                                                           <div class="card-body pb-5">
+                                                                                <div class="nav flex-colum">
+                                                                                     <div class="nav-item mb-2">
+                                                                                          <div class="card">
+                                                                                               <div class="nav-item">
+                                                                                                    <a href="#"
+                                                                                                         class="nav-link">mein</a>
+                                                                                               </div>
+                                                                                          </div>
+
+                                                                                          <div class="card">
+                                                                                               <div
+                                                                                                    class="nav-item mb-2">
+                                                                                                    <a href="#"
+                                                                                                         class="nav-link active">catalog</a>
+                                                                                               </div>
+
+                                                                                          </div>
+
+                                                                                          <div class="card">
+                                                                                               <div class="nav-item">
+                                                                                                    <a href="#"
+                                                                                                         class="nav-link disabled">FAQ
+                                                                                                         page</a>
+                                                                                               </div>
+                                                                                          </div>
+                                                                                     </div>
+                                                                                </div>
+                                                                           </div>
+                                                                      </div>
+                                                                 </div>
+                                                                 <div class="col-7">
+                                                                      <div class="row">
+                                                                           <div class="col-12">
+                                                                                <ol class="breadcrumb">
+                                                                                     <li class="breadcrumb-item">
+                                                                                          <a href="#">Home</a>
+                                                                                     </li>
+                                                                                     <li class="breadcrumb-item">
+                                                                                          <a href="#">Street</a>
+                                                                                     </li>
+                                                                                     <li class="breadcrumb-item">
+                                                                                          Town
+                                                                                     </li>
+                                                                                </ol>
+                                                                           </div>
+                                                                           <div class="col-12">
+                                                                                <button
+                                                                                     class="btn btn-primary rounded-pill m-5">click
+                                                                                     me</button>
+                                                                                <button
+                                                                                     class="btn btn-primary rounded-pill m-5 my-3 ms-0">click
+                                                                                     me</button>
+                                                                                <div class="alert alert-dark">
+                                                                                     <h6 class="m=0">Hello world <span
+                                                                                               class="bage text-bg-warning rounded-pill text-uppercase">Top</span>
+                                                                                     </h6>
+
+                                                                                </div>
+                                                                           </div>
+                                                                           <div class=" alert alert-primary">This is
+                                                                                impotant!</div>
+
+
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                       <<<<<<< HEAD </div>
+                                                  </main>
 
 
 
-     <!--  <div class="nav">
+                                                  <!--  <div class="nav">
           {{#with navigation}}
           {{#each links}}
           <div class="nav-item"><a href="{{href}}" class="nav-link">{{text}}</a></div>
@@ -256,57 +377,59 @@
 
 
 
-     {{#with gallery}}
-     <p>
-     <h2>{{name}}</h2>
-     </p>
-     <section class="row">
-          {{#each cards}}
-          <div class="col-4">
-               <div class="card">
-                    <div clas="card-body"> </div>
-                    <div class="List-group-item">
-                         <div ciass="display-6" class="card-header">{{name}} </div>
-                         {{#each items}}
-                         <div class="List-group-item">
-                              <ul>
-                                   <li>{{this}}</li>
-                              </ul>
-                         </div>
-                         {{/each}}
-                    </div>
+                                                  {{#with gallery}}
+                                                  <p>
+                                                  <h2>{{name}}</h2>
+                                                  </p>
+                                                  <section class="row">
+                                                       {{#each cards}}
+                                                       <div class="col-4">
+                                                            <div class="card">
+                                                                 <div clas="card-body"> </div>
+                                                                 <div class="List-group-item">
+                                                                      <div ciass="display-6" class="card-header">
+                                                                           {{name}} </div>
+                                                                      {{#each items}}
+                                                                      <div class="List-group-item">
+                                                                           <ul>
+                                                                                <li>{{this}}</li>
+                                                                           </ul>
+                                                                      </div>
+                                                                      {{/each}}
+                                                                 </div>
 
-               </div>
-          </div>
-          {{/each}}
-     </section>
-     {{/with}}
-     <hr>
-     <br />
+                                                            </div>
+                                                       </div>
+                                                       {{/each}}
+                                                  </section>
+                                                  {{/with}}
+                                                  <hr>
+                                                  <br />
 
-     {{#with relaxion}}
-     <div ciass="display-3">{{title}}</div>
-     <section class="row gx-5 gy-2">
-          {{#each cards}}
+                                                  {{#with relaxion}}
+                                                  <div ciass="display-3">{{title}}</div>
+                                                  <section class="row gx-5 gy-2">
+                                                       {{#each cards}}
 
-          <div class="col-5">
-               <div class="card">
-                    <div clas="card-body">
-                         <div class="card text-bg-secondary">
-                              <div ciass="display-4" class="card-header">{{header}} </div>
-                              <div class="display-6">{{title}}</div>
-                              <p class="text-muted">{{description}}</p>
-                         </div>
-                    </div>
-               </div>
+                                                       <div class="col-5">
+                                                            <div class="card">
+                                                                 <div clas="card-body">
+                                                                      <div class="card text-bg-secondary">
+                                                                           <div ciass="display-4" class="card-header">
+                                                                                {{header}} </div>
+                                                                           <div class="display-6">{{title}}</div>
+                                                                           <p class="text-muted">{{description}}</p>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
 
-          </div>
-          {{/each}}
-     </section>
-     {{/with}}
+                                                       </div>
+                                                       {{/each}}
+                                                  </section>
+                                                  {{/with}}
 
-     <br />================================
-     <hr><!-- {{#if isActive}}
+                                                  <br />================================
+                                                  <hr><!-- {{#if isActive}}
           <div class="nav-item"><a href="#" class="nav-link active">{{text}}</a></div>
           {{eise}}
           <div class="nav-item"><a href="#" class="nav-link disabled">{{text}}</a></div>
@@ -338,7 +461,7 @@
      {{/with}}
 </div>-->
 
-     <!--<div class="row"></div>
+                                                  <!--<div class="row"></div>
 <div class="col-12">
      <button class="btn btn-primary rounded-pill m-5">click me</button>
      <button class="btn btn-primary rounded-pill m-5 my-3 ms-0">click me</button>
@@ -346,7 +469,7 @@
           <h6 class="m=0">Hello world <span class="bage text-bg-warning rounded-pill text-uppercase">Top</span>
           </h6>-->
 
-     <!--div class="nav">
+                                                  <!--div class="nav">
      <div class="nav-tabs">
 
 
@@ -363,78 +486,85 @@
                {{/with}}-->
 
 
-     <div class="col-5">
-          <div class="card">
-               <img class="card-img-top" src="https://picsum.photos/400/200" alt="{{alt}}">
-               <div clas=" card-body">
-                    <h5 class="card-title">{{title}}</h5>
-                    <p class="text-muted">{{description}}</p>
-                    {{#with button}}
-                    <a href="{{href}}" class="btn btn-primary">{{text}}</a>
-                    {{/with}}
-               </div>
-          </div>
-     </div>
+                                                  <div class="col-5">
+                                                       <div class="card">
+                                                            <img class="card-img-top"
+                                                                 src="https://picsum.photos/400/200" alt="{{alt}}">
+                                                            <div clas=" card-body">
+                                                                 <h5 class="card-title">{{title}}</h5>
+                                                                 <p class="text-muted">{{description}}</p>
+                                                                 {{#with button}}
+                                                                 <a href="{{href}}" class="btn btn-primary">{{text}}</a>
+                                                                 {{/with}}
+                                                            </div>
+                                                       </div>
+                                                  </div>
 
-     {{/each}}
-</section>
-{{/with}}
-</div>
-<hr>
-<HR>
-{{#with subscribe}}
-<div class="row">
-     {{#each cards}}
-     <div class="col-12">
-          <div class="card">
-               <div clas="card-body">
-                    <div class="card text-bg-success">
-                         <div class="card-header">
-                              <h2>{{header}}</h2>
-                         </div>
-
-
-                         <h6 class="text-muted">{{description}}</h6>
-
-                         <div class="col-2"></div>
-                         <a href="{{link}}" class="btn btn-primary">{{text}}</a>
-                    </div>
+                                                  {{/each}}
+                                        </section>
+                                        {{/with}}
+                                   </div>
+                                   <hr>
+                                   <HR>
+                                   {{#with subscribe}}
+                                   <div class="row">
+                                        {{#each cards}}
+                                        <div class="col-12">
+                                             <div class="card">
+                                                  <div clas="card-body">
+                                                       <div class="card text-bg-success">
+                                                            <div class="card-header">
+                                                                 <h2>{{header}}</h2>
+                                                            </div>
 
 
-               </div>
-          </div>
-     </div>
-     {{/each}}
-</div>
-{{/with}}
+                                                            <h6 class="text-muted">{{description}}</h6>
+
+                                                            <div class="col-2"></div>
+                                                            <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                                                       </div>
+
+
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        {{/each}}
+                                   </div>
+                                   {{/with}}
 
 
 
 
 
-<!DOCTYPE html>
-<html>
+                                   <!DOCTYPE html>
+                                   <html>
 
-<head>
-     <title>
+                                   <head>
+                                        <title>
 
-          {{Page.title}}
+                                             {{Page.title}}
 
-     </title>
-     <meta charset='utf-8' />
-     <link href='css/index.css' rel='stylesheet' />
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+                                        </title>
+                                        <meta charset='utf-8' />
+                                        <link href='css/index.css' rel='stylesheet' />
+                                        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+                                             rel="stylesheet"
+                                             integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+                                             crossorigin="anonymous">
 
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-</head>
+                                        <link rel="stylesheet"
+                                             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+                                   </head>
 
-<body>
+                                   <body>
 
-     {{{body}}}
+                                        {{{body}}}
 
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+                                        <script
+                                             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+                                   </body>
 
-</html>
+                                   </html>
+                                   =======
+                                   >>>>>>> 5b26eeeba8e84a8a547fbc35c47edd39f6de6758
