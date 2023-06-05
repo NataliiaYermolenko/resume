@@ -24,7 +24,54 @@
 </footer>
 
 =======
-{{/with}} --big27
+
+
+<!--===================================================-->
+<div class="col-9">
+     {{#with delivery}}
+     <p class="display-3">{{title}}</p>
+     {{#each select}}
+     <div class="card m-2 p-2">
+          <div class="card-body">
+               <label class="form label">{{label}}</label>
+               <select class="form-select">
+                    <option selected>{{placeholder}}</option>
+                    {{#each options}}
+                    <option value="{{value}}"> {{text}}</option>
+                    {{/each}}
+               </select>
+          </div>
+
+
+
+          <div>
+               <div class="row g-1"></div>
+               {{#each goodsBlock}}
+               <div class="col-12">
+                    <div class="card mb-3">
+                         <div class="row">
+                              <div class="col-3">
+                                   <img src="{{image}}" class="img-fluid rounded-start" alt="...">
+                              </div>
+                         </div>
+                         <div class="col-8">
+                              <div class="card-body">
+                                   <h5 class="card-title">{{name}}</h5>
+                                   <p class="card-text"><small class="text-body-secondary">{{description}}</small></p>
+                                   {{#with price}}
+                                   <p class="card-text">{{title}} {{value}}</p>
+                                   {{/with}}
+                                   <p class="card-text">{{amount}}</p>
+                                   {{#each buttons}}
+                                   {{#if isPrimary}}
+                                   <div class="col-12">
+                                        <button class="btn btn-primary mb-2">{{text}}</button>
+                                   </div>
+                                   {{else}}
+                                   <button class="btn btn-danger mt-2 pb-2">{{text}}</button>
+                                   {{/if}}
+                                   {{/each}}
+=======
 
 <!--===================================================-->
 
@@ -243,10 +290,14 @@ layoout defalt
                                         </div>
                                    </div>
                                    <div class=" alert alert-primary">This is impotant!</div>
+
                               </div>
                          </div>
                     </div>
                </div>
+
+          </div>
+=======
      </div>
      </main>
 
@@ -454,6 +505,7 @@ firstname=header.name.firstname
 lastname=header.name.lastname
 < task31
 address=header.address}} 45-50-->
+
 
 
 
