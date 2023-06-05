@@ -1,0 +1,29 @@
+<section>
+
+     <div class="container">
+          <div class="row">
+
+               <div class="col order-first">
+                    <p class="text-muted">{{number}}</p>
+                    <p class="text-display-6">{{status}}</p>
+               </div>
+               {{#with amount}}
+               <div class="col">
+
+                    <p class="text-display-6">{{title}} {{value}}</p>
+
+               </div>
+               {{/with}}
+               <div class="col mb-5">
+                    {{#each images}}
+                    <img src="{{images}}" class="container-img-top" alt="...">
+                    {{/each}}
+               </div>
+               <div class="col order- last">
+                    {{#with button}}
+                    <a href="{{link}}" class="btn btn-primary btn-sm">{{text}}</a>
+                    {{/with}}
+               </div>
+          </div>
+     </div>
+</section>
